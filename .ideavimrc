@@ -1,0 +1,112 @@
+"" 使用:actionlist可以获取所有action,可自定义快捷键
+
+
+"" 通用
+
+" 开启增强/的搜索能力
+set incsearch
+" 设置一次滚动行数
+set scrolloff=5
+
+
+"" 跳转
+
+" 跳转到定义
+map gd :action GotoDeclaration<cr>
+" 跳转到实现
+map gi :action GotoImplementation<cr>
+" 跳转到引用
+map gu :action ShowUsages<cr>
+" 后退
+map gh :action Back<cr>
+" 前进
+map gl :action Forward<cr>
+
+
+"" 重构
+
+" 锁进
+map <Tab> :action EditorIndentSelection<cr>
+" 反向锁进
+map <S-Tab> :action EditorUnindentSelection<cr>
+" 向下移动行
+map <A-j> :action MoveLineDown<cr>
+" 向上移动行
+map <A-k> :action MoveLineUp<cr>
+" 重命名
+map <A-r> :action RenameElement<cr>
+" 提取常量
+map <A-c> :action IntroduceConstant<cr>
+" 提取变量
+map <A-v> :action IntroduceVariable<cr>
+" 提取字段
+map <A-f> :action IntroduceField<cr>
+" 提取方法
+map <A-m> :action ExtractMethod<cr>
+" 格式化代码
+map <A-F>f :action ReformatCode<cr>
+
+
+"" 搜索
+
+" 搜索类
+map <leader>sc :action GotoClass<cr>
+" 搜索文件
+map <leader>sf :action GotoFile<cr>
+" 搜索签名
+map <leader>ss :action GotoSymbol<cr>
+" 搜索全部
+map <leader>sa :action FindInPath<cr>
+" 搜索最近访问的文件
+map <leader>se :action RecentFiles<cr>
+
+
+"" 窗口
+
+" 窗口切分水平
+map <leader>wsh :action SplitHorizontally<cr>
+" 窗口切分垂直
+map <leader>wsv :action SplitVertically<cr>
+" 窗口关闭
+map <leader>wc :action CloseContent<cr>
+
+
+"" 程序
+
+" 程序运行
+map <leader>pr :action Run<cr>
+" 程序调试
+map <leader>pd :action Debug<cr>
+" 程序停止
+map <leader>ps :action Stop<cr>
+" 程序运行配置
+map <leader>prc :action RunConfiguration<cr>
+
+
+"" IdeaVim
+
+" 让vim独享以下快捷键
+sethandler <S-Tab> a:vim
+sethandler <C-2> a:vim
+sethandler <C-S-2> a:vim
+sethandler <C-S-6> a:vim
+sethandler <C-A> a:vim
+sethandler <C-B> a:vim
+sethandler <C-D> a:vim
+sethandler <C-E> a:vim
+sethandler <C-F> a:vim
+sethandler <C-G> a:vim
+sethandler <C-H> a:vim
+sethandler <C-I> a:vim
+sethandler <C-J> a:vim
+sethandler <C-K> a:vim
+sethandler <C-L> a:vim
+sethandler <C-M> a:vim
+sethandler <C-N> a:vim
+sethandler <C-O> a:vim
+sethandler <C-P> a:vim
+sethandler <C-R> a:vim
+sethandler <C-S> a:vim
+sethandler <C-T> a:vim
+sethandler <C-V> a:vim
+
