@@ -1,4 +1,4 @@
-" :actionlist可以获取所有action,可自定义快捷键
+" .ideavimrc
 
 " 搜索
 "" 搜索类
@@ -11,16 +11,16 @@
 :map se <Action>(RecentFiles)
 
 " 跳转
-"" 跳转到定义
+"" 去定义
 :map gd <Action>(GotoDeclaration)
-"" 跳转到实现
+"" 去实现
 :map gi <Action>(GotoImplementation)
-"" 跳转到引用
-:map gr <Action>(ShowUsages)
-"" 跳转后一个
-:map gh <Action>(Back)
-"" 跳转前一个
-:map gl <Action>(Forward)
+"" 去使用
+:map gu <Action>(ShowUsages)
+"" 去向后
+:map gb <Action>(Back)
+"" 去向前
+:map gf <Action>(Forward)
 
 " 移动
 "" 移动向上
@@ -29,15 +29,15 @@
 :map ∆ <Action>(MoveStatementDown)
 
 " 重构
-"" 重命名
+"" 重构重命名
 :map <leader>rr :action RenameElement<cr>
-"" 提取常量
+"" 重构提出常量
 :map <leader>rc :action IntroduceConstant<cr>
-"" 提取变量
+"" 重构提出变量
 :map <leader>rv :action IntroduceVariable<cr>
-"" 格式化代码
+"" 重构格式化代码
 :map <leader>rfc :action ReformatCode<cr>
-"" 优化import
+"" 重构import优化
 :map <leader>rio :action OptimizeImports<cr>
 
 " 快捷键冲突
