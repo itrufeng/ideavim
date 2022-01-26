@@ -15,150 +15,93 @@ ln -s ~/.ideavim/.ideavimrc ~/.ideavimrc
       <th>功能</th>
       <th>指令</th>
       <th>快捷键</th>
-      <th>备注</th>
+      <th>方便理解记忆</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowspan=5>跳转</td>
-      <td>跳转到定义</td>
-      <td>gd</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>跳转到实现</td>
-      <td>gi</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>跳转到引用</td>
-      <td>gu</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>后退</td>
-      <td>gh</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>前进</td>
-      <td>gl</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td rowspan=10>重构</td>
-      <td>缩进</td>
-      <td>Tab</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>反向缩进</td>
-      <td>Shift + Tab</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>向下移动行</td>
-      <td>Alt + j</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>向上移动行</td>
-      <td>Alt + k</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>重命名</td>
-      <td>Alt + r</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>提取常量</td>
-      <td>Alt + c</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>提取变量</td>
-      <td>Alt + v</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>提取字段</td>
-      <td>Alt + f</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>提取方法</td>
-      <td>Alt + m</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>格式化代码</td>
-      <td>Alt + Shift + f</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td rowspan=5>搜索</td>
+      <td rowspan=4>搜索</td>
       <td>搜索类</td>
-      <td>&lt;leader&gt;sc</td>
-      <td></td>
+      <td>sc</td>
+      <td>`s`earch `c`lasses</td>
     </tr>
     <tr>
       <td>搜索文件</td>
-      <td>&lt;leader&gt;sf</td>
-      <td></td>
+      <td>sf</td>
+      <td>`s`earch `f`iles</td>
     </tr>
     <tr>
-      <td>搜索签名</td>
-      <td>&lt;leader&gt;ss</td>
-      <td></td>
+      <td>搜索符号</td>
+      <td>ss</td>
+      <td>`s`earch `s`ymbol</td>
     </tr>
     <tr>
-      <td>搜索全部</td>
-      <td>&lt;leader&gt;sa</td>
-      <td></td>
+      <td>搜索最近文件</td>
+      <td>se</td>
+      <td>`s`earch r`e`cent files</td>
     </tr>
     <tr>
-      <td>搜索最近访问的文件</td>
-      <td>&lt;leader&gt;se</td>
-      <td></td>
+      <td rowspan=5>跳转</td>
+      <td>去定义</td>
+      <td>gd</td>
+      <td>`g`o to `d`eclaration</td>
     </tr>
     <tr>
-      <td rowspan=3>窗口</td>
-      <td>窗口切分水平</td>
-      <td>&lt;leader&gt;wsh</td>
-      <td></td>
+      <td>去实现</td>
+      <td>gi</td>
+      <td>`g`o to `i`mplementation</td>
     </tr>
     <tr>
-      <td>窗口切分垂直</td>
-      <td>&lt;leader&gt;wsv</td>
-      <td></td>
+      <td>去使用</td>
+      <td>gu</td>
+      <td>`g`o to `u`ses</td>
     </tr>
     <tr>
-      <td>窗口关闭</td>
-      <td>&lt;leader&gt;wc</td>
-      <td></td>
+      <td>去后退</td>
+      <td>gb</td>
+      <td>`g`o to `b`ack</td>
     </tr>
     <tr>
-      <td rowspan=4>程序</td>
-      <td>程序运行</td>
-      <td>&lt;leader&gt;pr</td>
-      <td></td>
+      <td>去向前</td>
+      <td>gf</td>
+      <td>`g`o to `f`orward</td>
     </tr>
     <tr>
-      <td>程序调试</td>
-      <td>&lt;leader&gt;pd</td>
-      <td></td>
+      <td rowspan=2>移动</td>
+      <td>上移动</td>
+      <td>Alt + k</td>
+      <td>k is up in vim</td>
     </tr>
     <tr>
-      <td>程序停止</td>
-      <td>&lt;leader&gt;ps</td>
-      <td></td>
+      <td>下移动</td>
+      <td>Alt + j</td>
+      <td>j is down in vim</td>
     </tr>
     <tr>
-      <td>程序运行配置</td>
-      <td>&lt;leader&gt;prc</td>
-      <td></td>
+      <td rowspan=5>重构</td>
+      <td>重命名</td>
+      <td>&lt;leader&gt;rr</td>
+      <td>`r`efactor `r`ename</td>
+    </tr>
+    <tr>
+      <td>提出常量</td>
+      <td>&lt;leader&gt;rc</td>
+      <td>`r`efactor introduce `c`onstant</td>
+    </tr>
+    <tr>
+      <td>提出变量</td>
+      <td>&lt;leader&gt;rv</td>
+      <td>`r`efactor introduce `v`ariable</td>
+    </tr>
+    <tr>
+      <td>格式化代码</td>
+      <td>&lt;leader&gt;rfc</td>
+      <td>`r`efactor `f`ormat `c`ode</td>
+    </tr>
+    <tr>
+      <td>import优化</td>
+      <td>&lt;leader&gt;rio</td>
+      <td>`r`efactor `i`mport `o`ptimize</td>
     </tr>
   </tbody>
 </table>
-
