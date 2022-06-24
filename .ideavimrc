@@ -65,3 +65,7 @@ sethandler <C-S> a:vim
 sethandler <C-T> a:vim
 sethandler <C-V> a:vim
 sethandler <C-W> a:vim
+
+# 相对行数
+set nu
+set relativenumber
