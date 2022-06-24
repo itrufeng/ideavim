@@ -43,6 +43,7 @@
 " 快捷键冲突
 sethandler <C-2> a:vim
 sethandler <C-S-2> a:vim
+sethandler <C-6> a:vim
 sethandler <C-S-6> a:vim
 sethandler <C-A> a:vim
 sethandler <C-B> a:vim
