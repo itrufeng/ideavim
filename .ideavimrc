@@ -1,52 +1,128 @@
-" .ideavimrc
+" plugins
+"   easymotion
+set easymotion
 
-" 搜索
-"" 搜索类
-:map sc <Action>(GotoClass)
-"" 搜索文件
-:map sf <Action>(GotoFile)
-"" 搜索符号
-:map ss <Action>(GotoSymbol)
-"" 搜索最近的文件
-:map se <Action>(RecentFiles)
+"   NERDTree
+set NERDTree
 
-" 跳转
-"" 去定义
-:map gd <Action>(GotoDeclaration)
-"" 去实现
-:map gi <Action>(GotoImplementation)
-"" 去使用
-:map gu <Action>(ShowUsages)
-"" 去向后
-:map gb <Action>(Back)
-"" 去向前
-:map gf <Action>(Forward)
+"   which-key
+set which-key
+set timeoutlen=10000
 
-" 移动
-"" 移动向上
-:map ˚ <Action>(MoveStatementUp)
-"" 移动向下
-:map ∆ <Action>(MoveStatementDown)
+" hotkeys
+"   navigation
+let g:WhichKeyDesc_go = "g +Go"
+let g:WhichKeyDesc_go_to_declaration = "gd go to declaration"
+:nmap gd <Action>(GotoDeclaration)
+let g:WhichKeyDesc_go_to_implementation = "gi go to implementation"
+:nmap gi <Action>(GotoImplementation)
+let g:WhichKeyDesc_go_to_class = "gc go to class"
+:nmap gc <Action>(GotoClass)
+let g:WhichKeyDesc_go_to_file = "gf go to file"
+:nmap gf <Action>(GotoFile)
+let g:WhichKeyDesc_go_to_symbol = "gs go to symbol"
+:nmap gs <Action>(GotoSymbol)
+let g:WhichKeyDesc_go_to_usages = "gu go to usages"
+:nmap gu <Action>(FindUsages)
+let g:WhichKeyDesc_go_to_test = "gt go to test"
+:nmap gt <Action>(GotoTest)
+let g:WhichKeyDesc_go_back = "gb go back"
+:nmap gb <Action>(Back)
+let g:WhichKeyDesc_go_forward = "gB go forward"
+:nmap gB <Action>(Forward)
+let g:WhichKeyDesc_go_to_recent_files = "ge go to recent files"
+:nmap ge <Action>(RecentFiles)
 
-" 重构
-"" 重构重命名
-:map <leader>rr :action RenameElement<cr>
-"" 重构提出常量
-:map <leader>rc :action IntroduceConstant<cr>
-"" 重构提出变量
-:map <leader>rv :action IntroduceVariable<cr>
-"" 重构格式化代码
-:map <leader>rfc :action ReformatCode<cr>
-"" 重构import优化
-:map <leader>rio :action OptimizeImports<cr>
+"   tree
+let g:WhichKeyDesc_tree = "<Space>t +Tree"
+let g:WhichKeyDesc_tree_toggle = "<Space>tt tree toggle"
+:nmap <silent> <Space>tt :<c-u>NERDTreeToggle<CR>
+let g:WhichKeyDesc_tree_find = "<Space>tf tree find"
+:nmap <silent> <Space>tf :<c-u>NERDTreeFind<CR>
 
-" 快捷键冲突
+"   quick fix
+let g:WhichKeyDesc_quick = "<Space>q +Quick"
+let g:WhichKeyDesc_quick_fix = "<Space>qf quick fix"
+:nmap <Space>qf <Action>(ShowIntentionActions)
+
+"   move
+let g:WhichKeyDesc_move = "<Space>m move"
+:nmap <Space>m <Plug>(easymotion-sn)
+
+"   refactor
+let g:WhichKeyDesc_refactor = "<Space>r +Refactor"
+let g:WhichKeyDesc_refactor_rename = "<Space>rr rename"
+:map <Space>rr <Action>(RenameElement)
+let g:WhichKeyDesc_refactor_extract_constant = "<Space>rc extract constant"
+:map <Space>rc <Action>(IntroduceConstant)
+let g:WhichKeyDesc_refactor_extract_variable = "<Space>rv extract variable"
+:map <Space>rv <Action>(IntroduceVariable)
+let g:WhichKeyDesc_refactor_extract_function = "<Space>rf extract function"
+:map <Space>rf <Action>(ExtractFunction)
+let g:WhichKeyDesc_refactor_extract_property = "<Space>rp extract property"
+:map <Space>rp <Action>(IntroduceProperty)
+
+"   find
+let g:WhichKeyDesc_find = "<Space>f +Find"
+let g:WhichKeyDesc_find_in = "<Space>fi +Find in"
+let g:WhichKeyDesc_find_in_file = "<Space>fif find in file"
+:nmap <Space>fif <Action>(Find)
+let g:WhichKeyDesc_find_in_project = "<Space>fip find in project"
+:nmap <Space>fip <Action>(FindInPath)
+let g:WhichKeyDesc_find_and = "<Space>fa +Find and"
+let g:WhichKeyDesc_find_and_replace = "<Space>far find and replace"
+:nmap <Space>far <Action>(Replace)
+
+"   windows
+"       common
+let g:WhichKeyDesc_window = "<Space>w +Window"
+let g:WhichKeyDesc_window_quit = "<Space>wq window quit"
+:nmap <Space>wq <Action>(CloseContent)
+let g:WhichKeyDesc_window_others = "<Space>wo +Window others"
+let g:WhichKeyDesc_window_others_quit = "<Space>woq window others quit"
+:nmap <Space>woq <Action>(CloseAllEditorsButActive)
+
+"       split
+let g:WhichKeyDesc_window_split = "<Space>ws +Window split"
+let g:WhichKeyDesc_window_split_vertically = "<Space>wsv window split vertically"
+:nmap <Space>wsv <Action>(SplitVertically)
+let g:WhichKeyDesc_window_split_horizontally = "<Space>wsh window split horizontally"
+:nmap <Space>wsh <Action>(SplitHorizontally)
+let g:WhichKeyDesc_window_split_quit = "<Space>wsq window split quit"
+:nmap <Space>wsq <Action>(Unsplit)
+let g:WhichKeyDesc_window_split_next = "<Space>wsn window split next"
+:nmap <Space>wsn <Action>(NextSplitter)
+let g:WhichKeyDesc_window_split_previous = "<Space>wsN window split previous"
+:nmap <Space>wsN <Action>(PrevSplitter)
+
+"   bookmark
+let g:WhichKeyDesc_bookmark = "<Space>b +Bookmark"
+let g:WhichKeyDesc_bookmark_toggle = "<Space>bt bookmark toggle"
+:nmap <Space>bt <Action>(ToggleBookmark)
+let g:WhichKeyDesc_bookmark_next = "<Space>bn bookmark next"
+:nmap <Space>bn <Action>(GotoNextBookmark)
+let g:WhichKeyDesc_bookmark_previous = "<Space>bN bookmark previous"
+:nmap <Space>bN <Action>(GotoPreviousBookmark)
+let g:WhichKeyDesc_bookmark_list = "<Space>bl bookmark list"
+:nmap <Space>bl <Action>(ShowBookmarks)
+
+"   git
+let g:WhichKeyDesc_git = "<Space>g +Git"
+let g:WhichKeyDesc_git_diff = "<Space>gd +Git diff"
+let g:WhichKeyDesc_git_diff_next = "<Space>gdn git diff next"
+:nmap <Space>gdn <Action>(VcsShowNextChangeMarker)
+let g:WhichKeyDesc_git_diff_previous = "<Space>gdN git diff previous"
+:nmap <Space>gdN <Action>(VcsShowPrevChangeMarker)
+
+
+" sethandler
 sethandler <C-2> a:vim
 sethandler <C-S-2> a:vim
 sethandler <C-6> a:vim
 sethandler <C-S-6> a:vim
 sethandler <C-A> a:vim
 sethandler <C-B> a:vim
+sethandler <C-C> a:vim
 sethandler <C-D> a:vim
 sethandler <C-E> a:vim
 sethandler <C-F> a:vim
@@ -65,8 +141,3 @@ sethandler <C-S> a:vim
 sethandler <C-T> a:vim
 sethandler <C-V> a:vim
 sethandler <C-W> a:vim
-
-" vim设置
-"" 相对行数
-set nu
-set relativenumber
