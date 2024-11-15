@@ -81,6 +81,8 @@ let g:WhichKeyDesc_window_quit = "<Space>wq window quit"
 let g:WhichKeyDesc_window_others = "<Space>wo +Window others"
 let g:WhichKeyDesc_window_others_quit = "<Space>woq window others quit"
 :nmap <Space>woq <Action>(CloseAllEditorsButActive)
+let g:WhichKeyDesc_window_hide = "<Space>wh window hide"
+:nmap <Space>wh <Action>(HideSideWindows)
 
 "       split
 let g:WhichKeyDesc_window_split = "<Space>ws +Window split"
